@@ -16,6 +16,145 @@ body{
 </style>
 </head>
 
+ <!DOCTYPE html>
+<html>
+<head>
+<title> 3D Surprise</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    background:linear-gradient(135deg,#000,#4b004b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    font-family:Arial;
+}
+
+.box{
+    text-align:center;
+    perspective:1000px;
+}
+
+.photo{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid pink;
+    box-shadow:0 0 30px red;
+    animation:photo3d 5s infinite linear;
+}
+
+.name{
+    margin-top:30px;
+    font-size:70px;
+    font-weight:bold;
+    color:#ff69b4;
+    text-shadow:0 0 20px red;
+    animation:text3d 5s infinite linear;
+}
+
+.company{
+    font-size:35px;
+    color:cyan;
+    margin-top:20px;
+    text-shadow:0 0 20px blue;
+}
+
+.message{
+    color:white;
+    font-size:22px;
+    margin-top:25px;
+    animation:fade 3s infinite;
+}
+
+.from{
+    color:#ffb6c1;
+    font-size:30px;
+    margin-top:20px;
+}
+
+
+@keyframes photo3d{
+
+0%{
+transform:rotateY(0deg);
+}
+
+50%{
+transform:rotateY(180deg) rotateX(20deg);
+}
+
+100%{
+transform:rotateY(360deg);
+}
+
+}
+
+
+@keyframes text3d{
+
+0%{
+transform:rotateY(0deg);
+}
+
+50%{
+transform:rotateY(180deg);
+}
+
+100%{
+transform:rotateY(360deg);
+}
+
+}
+
+
+@keyframes fade{
+
+50%{
+opacity:0.4;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="box">
+
+
+<div class="name">
+Manusha 💓
+</div>
+
+<div class="company">
+FLASHLINE COMPANY
+</div>
+
+<div class="message">
+✨ Keep smiling and achieve your dreams ✨
+<br>
+💫 Wishing you success always 💫
+</div>
+
+<div class="from">
+❤️ From Friend Mahesh ❤️
+</div>
+
+</div>
+
+
+</body>
+</html>
+
   <img src="manusha.jpg" alt="Manusha">
 
 <body>
@@ -23,8 +162,7 @@ body{
 <h1>💻 Mahesh Fun Mode 💻</h1>
 <p id="text"></p>
 
- <img src="manusha.jpg" alt="Manusha">
- 
+
 <script>
 let msg="Connecting to Manusha's Fun World... Loading Friendship... 100% Complete ❤️";
 let i=0;
